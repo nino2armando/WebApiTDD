@@ -8,7 +8,7 @@ using System.Transactions;
 using System.Web;
 using WebApiTDD.AppContext;
 using System.Transactions;
-using WebApiTDD.Models;
+using WebApiTDD.Domain.Models;
 
 namespace WebApiTDD.AppContext
 {
@@ -33,7 +33,7 @@ namespace WebApiTDD.AppContext
                 context.Database.ExecuteSqlCommand("ALTER DATABASE WebApiTDD SET SINGLE_USER WITH ROLLBACK IMMEDIATE"); 
                 context.Database.Delete();
 
-                // create all tables
+                // create all database
                 ((IObjectContextAdapter)context).ObjectContext.CreateDatabaseScript();
            
                 Seed(context);
@@ -42,7 +42,7 @@ namespace WebApiTDD.AppContext
             }
             else
             {
-                // create all tables
+                // create all database
                 ((IObjectContextAdapter)context).ObjectContext.CreateDatabaseScript();
 
                 Seed(context);
@@ -57,6 +57,29 @@ namespace WebApiTDD.AppContext
             var finance = new Department {Name = "Finance"};
             context.Departments.Add(it);
             context.Departments.Add(finance);
+
+            var manager = new Manager
+                {
+                    Name = "Nino",
+                    Department = it
+                };
+            var secondeManager = new Manager
+            {
+                Name = "Krista",
+                Department = finance
+            };
+
+            context.Managers.Add(manager);
+            context.Managers.Add(secondeManager);
+
+            var collab = new Collarborator
+                {
+                    Name = "Tracy",
+                    Department = finance,
+                    Manager = manager
+
+                };
+            context.Collarborators.Add(collab);
             context.SaveChanges();
         }
     }

@@ -1,5 +1,5 @@
 using System.Data.Entity.ModelConfiguration;
-using WebApiTDD.Models;
+using WebApiTDD.Domain.Models;
 
 namespace WebApiTDD.AppContext.Mapping
 {
@@ -14,8 +14,6 @@ namespace WebApiTDD.AppContext.Mapping
             // Table & Column Mappings
             this.ToTable("Collarborators");
             this.Property(t => t.Id).HasColumnName("Id");
-            this.Property(t => t.ColaboratorId).HasColumnName("ColaboratorId");
-            this.Property(t => t.ManagerCode).HasColumnName("ManagerCode");
             this.Property(t => t.Name).HasColumnName("Name");
             this.Property(t => t.Manager_Id).HasColumnName("Manager_Id");
             this.Property(t => t.Department_Id).HasColumnName("Department_Id");

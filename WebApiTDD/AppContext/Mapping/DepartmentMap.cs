@@ -1,5 +1,5 @@
 using System.Data.Entity.ModelConfiguration;
-using WebApiTDD.Models;
+using WebApiTDD.Domain.Models;
 
 namespace WebApiTDD.AppContext.Mapping
 {

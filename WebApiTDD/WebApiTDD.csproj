@@ -168,14 +168,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\BaseDepartment.cs" />
-    <Compile Include="Models\Collarborator.cs" />
-    <Compile Include="Models\Department.cs" />
-    <Compile Include="Models\Manager.cs" />
     <Compile Include="AppContext\Mapping\CollarboratorMap.cs" />
     <Compile Include="AppContext\Mapping\DepartmentMap.cs" />
     <Compile Include="AppContext\Mapping\ManagerMap.cs" />
-    <Compile Include="Models\Person.cs" />
     <Compile Include="AppContext\WebApiTDDContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -291,12 +286,27 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="_MSBuild\NuGetPackageAndPublish.targets" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebApiTDD.DataContract\WebApiTDD.DataContract.csproj">
+      <Project>{bc38abf9-8508-4d87-9bef-3a9bd845d000}</Project>
+      <Name>WebApiTDD.DataContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebApiTDD.Domain\WebApiTDD.Domain.csproj">
+      <Project>{7f2e972a-82f8-4fde-843a-ad12988fd831}</Project>
+      <Name>WebApiTDD.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebApiTDD.Sevice\WebApiTDD.Sevice.csproj">
+      <Project>{1163f908-d618-464a-8d7e-4fe368da9b35}</Project>
+      <Name>WebApiTDD.Sevice</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

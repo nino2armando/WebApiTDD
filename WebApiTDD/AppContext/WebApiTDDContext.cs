@@ -1,7 +1,7 @@
 using System.Data.Entity;
 using WebApiTDD.AppContext;
 using WebApiTDD.AppContext.Mapping;
-using WebApiTDD.Models;
+using WebApiTDD.Domain.Models;
 
 namespace WebApiTDD.AppContext
 {

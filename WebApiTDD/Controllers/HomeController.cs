@@ -1,8 +1,5 @@
-﻿
-using System.Web.Mvc;
-using WebApiTDD.AppContext;
-using WebApiTDD.AppContext;
-using WebApiTDD.Models;
+﻿using System.Web.Mvc;
+
 
 namespace WebApiTDD.Controllers
 {
@@ -10,13 +7,6 @@ namespace WebApiTDD.Controllers
     {
         public ActionResult Index()
         {
-            WebApiTddContext 
-               context = new WebApiTddContext();
-            Manager manager = new Manager();
-            manager.Name = "nino";
-            
-            context.Managers.Add(manager);
-            context.SaveChanges();
             return View();
         }
     }
