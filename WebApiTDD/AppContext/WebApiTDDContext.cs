@@ -2,10 +2,11 @@ using System.Data.Entity;
 using WebApiTDD.AppContext;
 using WebApiTDD.AppContext.Mapping;
 using WebApiTDD.Domain.Models;
+using WebApiTDD.Repository.Repository;
 
 namespace WebApiTDD.AppContext
 {
-    public partial class WebApiTddContext : DbContext
+    public partial class WebApiTddContext : DbContext, IDbContext
     {
         static WebApiTddContext()
         {

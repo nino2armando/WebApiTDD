@@ -303,6 +303,10 @@
       <Project>{7f2e972a-82f8-4fde-843a-ad12988fd831}</Project>
       <Name>WebApiTDD.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WebApiTDD.Repository\WebApiTDD.Repository.csproj">
+      <Project>{afad37ef-9e0a-479a-8f8d-72c02e547545}</Project>
+      <Name>WebApiTDD.Repository</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WebApiTDD.Sevice\WebApiTDD.Sevice.csproj">
       <Project>{1163f908-d618-464a-8d7e-4fe368da9b35}</Project>
       <Name>WebApiTDD.Sevice</Name>
