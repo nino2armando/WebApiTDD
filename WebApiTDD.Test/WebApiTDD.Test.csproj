@@ -38,11 +38,15 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\WebApiTDD\bin\EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="FluentAssertions">
+      <HintPath>..\packages\FluentAssertions.2.0.1\lib\net45\FluentAssertions.dll</HintPath>
+    </Reference>
     <Reference Include="Moq">
       <HintPath>..\packages\Moq.4.0.10827\lib\NET40\Moq.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IdentityModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -78,6 +82,10 @@
     <ProjectReference Include="..\WebApiTDD.Repository\WebApiTDD.Repository.csproj">
       <Project>{AFAD37EF-9E0A-479A-8F8D-72C02E547545}</Project>
       <Name>WebApiTDD.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebApiTDD.Security\WebApiTDD.Security.csproj">
+      <Project>{F5189A7C-7942-4613-8A89-6DE526BA3C1A}</Project>
+      <Name>WebApiTDD.Security</Name>
     </ProjectReference>
     <ProjectReference Include="..\WebApiTDD.Sevice\WebApiTDD.Sevice.csproj">
       <Project>{1163F908-D618-464A-8D7E-4FE368DA9B35}</Project>

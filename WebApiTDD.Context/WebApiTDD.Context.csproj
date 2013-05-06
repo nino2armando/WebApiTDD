@@ -50,7 +50,7 @@
     <Compile Include="AppContext\Mapping\CollarboratorMap.cs" />
     <Compile Include="AppContext\Mapping\DepartmentMap.cs" />
     <Compile Include="AppContext\Mapping\ManagerMap.cs" />
-    <Compile Include="AppContext\WebApiTDDContext.cs" />
+    <Compile Include="AppContext\WebApiTddContext.cs" />
     <Compile Include="IDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
