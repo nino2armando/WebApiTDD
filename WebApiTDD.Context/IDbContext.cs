@@ -1,7 +1,7 @@
 ﻿using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 
-namespace WebApiTDD.Repository.Repository
+namespace WebApiTDD.Context
 {
     public interface IDbContext
     {

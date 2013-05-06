@@ -1,7 +1,7 @@
 using System.Data.Entity.ModelConfiguration;
 using WebApiTDD.Domain.Models;
 
-namespace WebApiTDD.AppContext.Mapping
+namespace WebApiTDD.Context.AppContext.Mapping
 {
     public class DepartmentMap : EntityTypeConfiguration<Department>
     {

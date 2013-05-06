@@ -2,7 +2,7 @@
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
-using WebApiTDD.Repository.UnitOfWork;
+using WebApiTDD.Context;
 
 namespace WebApiTDD.Repository.Repository
 {

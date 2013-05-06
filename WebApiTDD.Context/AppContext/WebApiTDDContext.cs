@@ -1,10 +1,8 @@
 using System.Data.Entity;
-using WebApiTDD.AppContext;
-using WebApiTDD.AppContext.Mapping;
+using WebApiTDD.Context.AppContext.Mapping;
 using WebApiTDD.Domain.Models;
-using WebApiTDD.Repository.Repository;
 
-namespace WebApiTDD.AppContext
+namespace WebApiTDD.Context.AppContext
 {
     public partial class WebApiTddContext : DbContext, IDbContext
     {

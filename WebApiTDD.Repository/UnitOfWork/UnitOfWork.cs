@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
+using WebApiTDD.Context;
 using WebApiTDD.Repository.Repository;
 
 namespace WebApiTDD.Repository.UnitOfWork
@@ -9,7 +10,7 @@ namespace WebApiTDD.Repository.UnitOfWork
     public class UnitOfWork<TContext> : IUnitOfWork where TContext : IDbContext, new()
     {
         private readonly IDbContext _context;
-        private Dictionary<Type, Object> _repositories;
+        private readonly Dictionary<Type, Object> _repositories;
         private bool _disposed;
 
         public UnitOfWork()

@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Transactions;
-using System.Web;
-using WebApiTDD.AppContext;
 using System.Transactions;
 using WebApiTDD.Domain.Models;
 
-namespace WebApiTDD.AppContext
+namespace WebApiTDD.Context.AppContext
 {
     public class DropCreateDatabase : IDatabaseInitializer<WebApiTddContext>
     {

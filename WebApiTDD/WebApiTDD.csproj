@@ -39,6 +39,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.2.2.1\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Activities" />
@@ -162,16 +165,11 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
-    <Compile Include="AppContext\DropCreateDatabase.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="AppContext\Mapping\CollarboratorMap.cs" />
-    <Compile Include="AppContext\Mapping\DepartmentMap.cs" />
-    <Compile Include="AppContext\Mapping\ManagerMap.cs" />
-    <Compile Include="AppContext\WebApiTDDContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -295,6 +293,10 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\WebApiTDD.Context\WebApiTDD.Context.csproj">
+      <Project>{49869E80-40B6-4732-BA55-2E0BC2C57C1B}</Project>
+      <Name>WebApiTDD.Context</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WebApiTDD.DataContract\WebApiTDD.DataContract.csproj">
       <Project>{bc38abf9-8508-4d87-9bef-3a9bd845d000}</Project>
       <Name>WebApiTDD.DataContract</Name>
@@ -308,7 +310,7 @@
       <Name>WebApiTDD.Repository</Name>
     </ProjectReference>
     <ProjectReference Include="..\WebApiTDD.Sevice\WebApiTDD.Sevice.csproj">
-      <Project>{1163f908-d618-464a-8d7e-4fe368da9b35}</Project>
+      <Project>{1163F908-D618-464A-8D7E-4FE368DA9B35}</Project>
       <Name>WebApiTDD.Sevice</Name>
     </ProjectReference>
   </ItemGroup>
