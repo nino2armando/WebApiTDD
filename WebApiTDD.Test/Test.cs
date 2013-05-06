@@ -72,7 +72,11 @@ namespace WebApiTDD.Test
 
             var emailClaimType = claimsPrincipal.Claims.Where(a => a.Type == ClaimTypes.Email);
 
+            bool hasemail = claimsPrincipal.HasClaim(c => c.Type == ClaimTypes.Email);
+
             emailClaimType.Count().Should().BeGreaterOrEqualTo(1);
+
+            Assert.True(hasemail);
 
         }
 
@@ -108,9 +112,16 @@ namespace WebApiTDD.Test
                 {
                     new Claim(ClaimTypes.Email,"Nino@email.com"),
                     new Claim(ClaimTypes.Name, "Nino"),
-                    new Claim(ClaimTypes.GivenName,"khodabandeh")
+                    new Claim(ClaimTypes.GivenName,"khodabandeh"),
+                    new Claim(ClaimTypes.Role,"Developer"),
+                    new Claim("http://remondo.claims/Area", "Vancouver")
                 };
-            ClaimsIdentity identity = new ClaimsIdentity(claims);
+
+            ClaimsIdentity identity = new ClaimsIdentity(
+                claims,
+                "basic",
+                "UserName",
+                ClaimTypes.Role);
 
             var auth = new WebApiTddClaimAuthenticationManager();
             ClaimsPrincipal claimPrincipalToTest = auth.Authenticate(string.Empty, new ClaimsPrincipal(new[] { identity }));
